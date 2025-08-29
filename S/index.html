@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PintorPro - Ferramentas para Pintores Profissionais</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i>🎨</i> PintorPro
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#calculadora">Calculadora</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#dicas">Dicas</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Ferramentas para Pintores Profissionais</h1>
+            <p>Calculadoras, dicas técnicas, portfólio e tudo que você precisa para otimizar seu trabalho e impressionar seus clientes</p>
+            <a href="#calculadora" class="btn">Começar a Calcular</a>
+        </div>
+    </section>
+
+    <!-- Calculadora de Tinta -->
+    <section id="calculadora">
+        <div class="container">
+            <h2>Calculadora de Tinta</h2>
+            <div class="calculator">
+                <div class="form-group">
+                    <label for="comprimento">Comprimento da Parede (m):</label>
+                    <input type="number" id="comprimento" placeholder="Ex: 4.5" step="0.1">
+                </div>
+                <div class="form-group">
+                    <label for="altura">Altura da Parede (m):</label>
+                    <input type="number" id="altura" placeholder="Ex: 2.8" step="0.1">
+                </div>
+                <div class="form-group">
+                    <label for="portas">Número de Portas:</label>
+                    <input type="number" id="portas" placeholder="Ex: 1" value="0">
+                </div>
+                <div class="form-group">
+                    <label for="janelas">Número de Janelas:</label>
+                    <input type="number" id="janelas" placeholder="Ex: 2" value="0">
+                </div>
+                <div class="form-group">
+                    <label for="demao">Número de Demãos:</label>
+                    <select id="demao">
+                        <option value="1">1 Demão</option>
+                        <option value="2" selected>2 Demãos</option>
+                        <option value="3">3 Demãos</option>
+                    </select>
+                </div>
+                <button class="btn" onclick="calcularTinta()">Calcular Quantidade de Tinta</button>
+                
+                <div class="calculator-result" id="resultado">
+                    <h3>Resultado:</h3>
+                    <p id="quantidade-tinta"></p>
+                    <p id="latas"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria de Trabalhos -->
+    <section id="galeria" style="background-color: #f9f9f9;">
+        <div class="container">
+            <h2>Galeria de Trabalhos</h2>
+            <p style="text-align: center; margin-bottom: 30px;">Inspire-se com estes exemplos de trabalhos profissionais</p>
+            
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'><rect width='300' height='200' fill='%23f0f0f0'/><text x='150' y='100' font-family='Arial' font-size='18' fill='%23333' text-anchor='middle'>Pintura Residencial</text></svg>" alt="Pintura Residencial">
+                </div>
+                <div class="gallery-item">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'><rect width='300' height='200' fill='%23f0f0f0'/><text x='150' y='100' font-family='Arial' font-size='18' fill='%23333' text-anchor='middle'>Pintura Commercial</text></svg>" alt="Pintura Commercial">
+                </div>
+                <div class="gallery-item">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'><rect width='300' height='200' fill='%23f0f0f0'/><text x='150' y='100' font-family='Arial' font-size='18' fill='%23333' text-anchor='middle'>Texturas e Efeitos</text></svg>" alt="Texturas e Efeitos">
+                </div>
+                <div class="gallery-item">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'><rect width='300' height='200' fill='%23f0f0f0'/><text x='150' y='100' font-family='Arial' font-size='18' fill='%23333' text-anchor='middle'>Pintura Externa</text></svg>" alt="Pintura Externa">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dicas Técnicas -->
+    <section id="dicas">
+        <div class="container">
+            <h2>Dicas Técnicas</h2>
+            <div class="tips-container">
+                <div class="tip-card">
+                    <div class="tip-content">
+                        <h3>Preparação da Superfície</h3>
+                        <p>A chave para uma pintura perfeita está na preparação. Lixe, limpe e imperfeições antes de começar a pintar.</p>
+                    </div>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-content">
+                        <h3>Escolha do Rolo</h3>
+                        <p>Use rolos de lã de carneiro para superfícies lisas e rolos de pelo mais curto para texturas.</p>
+                    </div>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-content">
+                        <h3>Temperatura Ideal</h3>
+                        <p>Pinte em temperaturas entre 10°C e 30°C e evite a luz solar direta sobre a superfície recém-pintada.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" style="background-color: #f9f9f9;">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <div class="contact-form">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" placeholder="Seu nome completo">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" placeholder="seu@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" placeholder="Sua mensagem ou dúvida"></textarea>
+                </div>
+                <button class="btn" onclick="enviarMensagem()">Enviar Mensagem</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">
+                    <i>🎨</i> PintorPro
+                </div>
+                <p>Ferramentas e recursos para pintores profissionais</p>
+                <div class="social-links">
+                    <a href="#">📱</a>
+                    <a href="#">📷</a>
+                    <a href="#">👥</a>
+                </div>
+                <p>&copy; 2023 PintorPro - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
